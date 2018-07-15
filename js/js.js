@@ -1,19 +1,42 @@
-
-    $(function($){
-        var addToAll = false;
-        var gallery = true;
-        var titlePosition = 'inside';
-        $(addToAll ? 'img' : 'img.fancybox').each(function(){
-            var $this = $(this);
-            var title = $this.attr('title');
-            var src = $this.attr('data-big') || $this.attr('src');
-            var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
-            $this.wrap(a);
-        });
-        if (gallery)
-            $('a.fancybox').attr('rel', 'fancyboxgallery');
-        $('a.fancybox').fancybox({
-            titlePosition: titlePosition
-        });
-    });
-    $.noConflict();
+$(document).ready(function(){
+     $(".smootha").click(function() {
+         $('html,body').animate({
+             scrollTop: $("#home").offset().top},
+             'slow');
+     });
+});
+$(document).ready(function(){
+     $(".smoothb").click(function() {
+         $('html,body').animate({
+             scrollTop: $("#about").offset().top},
+             'slow');
+     });
+});
+$(document).ready(function(){
+     $(".smoothc").click(function() {
+         $('html,body').animate({
+             scrollTop: $("#services").offset().top},
+             'slow');
+     });
+});
+$(document).ready(function(){
+     $(".smoothd").click(function() {
+         $('html,body').animate({
+             scrollTop: $("#work").offset().top},
+             'slow');
+     });
+});
+$(document).ready(function(){
+     $(".smoothe").click(function() {
+         $('html,body').animate({
+             scrollTop: $("#clients").offset().top},
+             'slow');
+     });
+});
+$(document).ready(function(){
+     $(".smoothf").click(function() {
+         $('html,body').animate({
+             scrollTop: $("#contact").offset().top},
+             'slow');
+     });
+});
